@@ -1,0 +1,115 @@
+header {
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  min-height: 97px;
+  position: relative;
+}
+
+header .container::before {
+  content: '';
+  position: absolute;
+  width: 97%;
+  background-color: #a2a2a2;
+  height: 1px;
+  bottom: 0;
+  left: 15px;
+}
+
+header .container .logo img {
+  height: 40px;
+}
+
+header .container nav {
+  display: flex;
+}
+
+header .container ul {
+  display: flex;
+}
+
+
+
+header .container ul li a {
+  color: white;
+  display: block;
+  font-size: 15px;
+  text-decoration: none;
+  padding: 40px 10px;
+  position: relative;
+  z-index: 2;
+}
+
+header .container .toggle-menu {
+  display: none;
+
+}
+
+@media (max-width:767px) {
+
+  header .container .toggle-menu:hover+ul {
+    display: flex;
+  }
+
+  header .container .toggle-menu {
+    display: flex;
+    position: absolute;
+    top: 40px;
+    right: 80px;
+    font-size: 20px;
+    color: white;
+  }
+
+  header .container nav ul {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    position: absolute;
+    top: 99px;
+    left: 0;
+    background-color: rgb(0 0 0 / 50%);
+    width: 100%;
+    display: none;
+  }
+
+  header .container ul li {
+    width: 100%;
+  }
+
+  header .container ul li a {
+    padding: 15px !important;
+  }
+
+}
+
+header .container ul li .active,
+header .container ul li a:hover {
+  color: var(--main-color);
+  border-bottom: 1px solid var(--main-color);
+}
+
+
+header .container nav .form {
+  width: 40px;
+  height: 30px;
+  position: relative;
+  margin-left: 30px;
+  border-left: 1px solid white;
+  align-self: center;
+}
+
+header .container nav .form i {
+  color: white;
+  position: absolute;
+  font-size: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 0;
+
+}
